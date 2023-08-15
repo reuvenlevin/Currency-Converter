@@ -1,0 +1,27 @@
+<androidx.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.preference.PreferenceCategory
+        app:title="Currency Conversion">
+
+        <androidx.preference.ListPreference
+            app:key="saved_currency"
+            app:title="Saved Currency"
+            app:useSimpleSummaryProvider="true"
+            app:entries="@array/currency_entries"
+            app:entryValues="@array/currency_values"
+            app:defaultValue="usd" />
+
+
+
+    </androidx.preference.PreferenceCategory>
+
+
+    <CheckBoxPreference
+        app:key="@string/key_use_auto_save"
+        app:title="@string/title_use_auto_save"
+        app:defaultValue="true" />
+
+</androidx.preference.PreferenceScreen>
+
