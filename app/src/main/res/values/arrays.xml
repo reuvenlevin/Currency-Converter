@@ -1,38 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
+    <string-array name="currency_entries">
 
-    <string-array name="currency_names">
-        <item>United States Dollar (USD)</item>
-        <item>Euro (EUR)</item>
-        <item>British Pound (GBP)</item>
-        <item>Japanese Yen (JPY)</item>
-        <item>Australian Dollar (AUD)</item>
-        <item>Canadian Dollar (CAD)</item>
-        <item>Swiss Franc (CHF)</item>
-        <item>Chinese Yuan (CNY)</item>
-        <item>Indian Rupee (INR)</item>
-        <item>South Korean Won (KRW)</item>
-        <item>Mexican Peso (MXN)</item>
-        <item>Russian Ruble (RUB)</item>
-        <item>Israeli New Shekel (ILS)</item>
-
+        <item>AED - United Arab Emirates Dirham</item>
+        <item>ARS - Argentine Peso</item>
+        <item>AUD - Australian Dollar</item>
+        <item>BHD - Bahraini Dinar</item>
+        <item>BDT - Bangladeshi Taka</item>
+        <item>BOB - Bolivian Bolíviano</item>
+        <item>BRL - Brazilian Real</item>
+        <item>CAD - Canadian Dollar</item>
+        <item>CHF - Swiss Franc</item>
+        <item>CLP - Chilean Peso</item>
+        <item>CNY - Chinese Yuan</item>
+        <item>COP - Colombian Peso</item>
+        <item>CRC - Costa Rican Colón</item>
+        <item>CUC - Cuban Convertible Peso</item>
+        <item>CZK - Czech Koruna</item>
+        <item>DKK - Danish Krone</item>
+        <item>DO - Dominican Peso</item>
+        <item>EGP - Egyptian Pound</item>
+        <item>EUR - Euro</item>
+        <item>GBP - British Pound</item>
+        <item>GTQ - Guatemalan Quetzal</item>
+        <item>HKD - Hong Kong Dollar</item>
+        <item>HNL - Honduran Lempira</item>
+        <item>HRK - Croatian Kuna</item>
+        <item>HUF - Hungarian Forint</item>
+        <item>IDR - Indonesian Rupiah</item>
+        <item>ILS - Israeli New Shekel</item>
+        <item>INR - Indian Rupee</item>
+        <item>ISK - Icelandic Króna</item>
+        <item>JOD - Jordanian Dinar</item>
+        <item>JPY - Japanese Yen</item>
+        <item>KGS - Kyrgyzstani Som</item>
+        <item>KRW - South Korean Won</item>
+        <item>KWD - Kuwaiti Dinar</item>
+        <item>KZT - Kazakhstani Tenge</item>
+        <item>LKR - Sri Lankan Rupee</item>
+        <item>MYR - Malaysian Ringgit</item>
+        <item>MXN - Mexican Peso</item>
+        <item>NIO - Nicaraguan Córdoba</item>
+        <item>NPR - Nepalese Rupee</item>
+        <item>NZD - New Zealand Dollar</item>
+        <item>OMR - Omani Rial</item>
+        <item>PAB - Panamanian Balboa</item>
+        <item>PEN - Peruvian Sol</item>
+        <item>PHP - Philippine Peso</item>
+        <item>PKR - Pakistani Rupee</item>
+        <item>PLN - Polish Złoty</item>
+        <item>PYG - Paraguayan Guarani</item>
+        <item>QAR - Qatari Riyal</item>
+        <item>RON - Romanian Leu</item>
+        <item>RSD - Serbian Dinar</item>
+        <item>RUB - Russian Ruble</item>
+        <item>SAR - Saudi Riyal</item>
+        <item>SEK - Swedish Krona</item>
+        <item>SGD - Singapore Dollar</item>
+        <item>THB - Thai Baht</item>
+        <item>TJS - Tajikistani Somoni</item>
+        <item>TRY - Turkish Lira</item>
+        <item>TWD - New Taiwan Dollar</item>
+        <item>UAH - Ukrainian Hryvnia</item>
+        <item>USD - US Dollar</item>
+        <item>UYU - Uruguayan Peso</item>
+        <item>UZS - Uzbekistani Som</item>
+        <item>VEF - Venezuelan Bolívar</item>
+        <item>VND - Vietnamese Dong</item>
+        <item>ZAR - South African Rand</item>
     </string-array>
 
-    <string-array name="currency_codes">
-        <item>USD</item>
-        <item>EUR</item>
-        <item>GBP</item>
-        <item>JPY</item>
-        <item>AUD</item>
-        <item>CAD</item>
-        <item>CHF</item>
-        <item>CNY</item>
-        <item>INR</item>
-        <item>KRW</item>
-        <item>MXN</item>
-        <item>RUB</item>
-        <item>ILS</item>
+    <string-array name="currency_values">
 
+        <item>aed</item>
+        <item>ars</item>
+        <item>aud</item>
+        <item>bhd</item>
+        <item>bdt</item>
+        <item>bob</item>
+        <item>brl</item>
+        <item>cad</item>
+        <item>chf</item>
+        <item>clp</item>
+        <item>cny</item>
+        <item>cop</item>
+        <item>crc</item>
+        <item>cuc</item>
+        <item>czk</item>
+        <item>dkk</item>
+        <item>dop</item>
+        <item>egp</item>
+        <item>eur</item>
+        <item>gbp</item>
+        <item>gtq</item>
+        <item>hkd</item>
+        <item>hnl</item>
+        <item>hrk</item>
+        <item>huf</item>
+        <item>idr</item>
+        <item>ils</item>
+        <item>inr</item>
+        <item>isk</item>
+        <item>jod</item>
+        <item>jpy</item>
+        <item>kgs</item>
+        <item>krw</item>
+        <item>kwd</item>
+        <item>kzt</item>
+        <item>lkr</item>
+        <item>myr</item>
+        <item>mxn</item>
+        <item>nio</item>
+        <item>npr</item>
+        <item>nzd</item>
+        <item>omr</item>
+        <item>pab</item>
+        <item>pen</item>
+        <item>php</item>
+        <item>pkr</item>
+        <item>pln</item>
+        <item>pyg</item>
+        <item>qar</item>
+        <item>ron</item>
+        <item>rsd</item>
+        <item>rub</item>
+        <item>sar</item>
+        <item>sek</item>
+        <item>sgd</item>
+        <item>thb</item>
+        <item>tjs</item>
+        <item>try</item>
+        <item>twd</item>
+        <item>uah</item>
+        <item>usd</item>
+        <item>uyu</item>
+        <item>uzs</item>
+        <item>vef</item>
+        <item>vnd</item>
+        <item>zar</item>
     </string-array>
-
 </resources>
