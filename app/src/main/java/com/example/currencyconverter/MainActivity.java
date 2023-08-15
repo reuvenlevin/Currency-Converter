@@ -14,6 +14,9 @@ import com.example.currencyconverter.databinding.ActivityMainBinding;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -27,7 +30,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
+        Spinner spinnerLanguages=findViewById(R.id.spinner_from);
+        ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(this, R.array.languages, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerLanguages.setAdapter(adapter);
 
+
+        Spinner spinner_bottom=findViewById(R.id.spinner_to);
+        spinner_bottom.setAdapter(adapter);
 
 
         binding.fab.setOnClickListener(new View.OnClickListener() {
