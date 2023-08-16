@@ -1,3 +1,5 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="default_padding">8dp</dimen>
+    <dimen name ="input_box"> 18dp</dimen>
 </resources>
