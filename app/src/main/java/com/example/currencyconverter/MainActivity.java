@@ -1,18 +1,21 @@
 package com.example.currencyconverter;
 
+import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.View;
-
-
-import com.example.currencyconverter.databinding.ActivityMainBinding;
-
 import android.view.Menu;
 import android.view.MenuItem;
+
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.currencyconverter.databinding.ActivityMainBinding;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,9 +31,18 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
+        Spinner spinnerLanguages=findViewById(R.id.spinner_from);
+        ArrayAdapter<CharSequence>adapter =
+                ArrayAdapter.createFromResource(this, R.array.languages, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerLanguages.setAdapter(adapter);
 
 
-        binding.fab.setOnClickListener(new View.OnClickListener() {
+        Spinner spinner_bottom=findViewById(R.id.spinner_to);
+        spinner_bottom.setAdapter(adapter);
+
+
+        binding.toolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -48,19 +60,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.action_settings) {
+            Intent intent = new Intent(this, SettingsActivity2.class);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.action_about) {
+            showAboutDialog();
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
-
+    private void showAboutDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.action_about);
+        builder.setMessage(R.string.about_message);
+        builder.setPositiveButton(android.R.string.ok, null);
+        builder.create().show();
+    }
 }
+
+
