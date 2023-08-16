@@ -1,8 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Base.Theme.CurrencyConverter"
-        parent="Theme.AppCompat.Light.DarkActionBar">
+<!--    <style name="Base.Theme.CurrencyConverter"-->
+<!--        parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <style name="Base.Theme.CurrencyConverter" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/yellow</item>
     </style>
 
     <color name="yellow">#FFE500</color>
+    <style name="Theme.CurrencyConverter" parent="Base.Theme.CurrencyConverter" />
 </resources>
