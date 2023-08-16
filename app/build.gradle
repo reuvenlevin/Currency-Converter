@@ -19,6 +19,7 @@ android {
         // code from: https://guides.codepath.com/android/storing-secret-keys-in-android
         def apikeyPropertiesFile = rootProject.file("apikey.properties")
         def apikeyProperties = new Properties()
+
         apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
 
         // should correspond to key/value pairs inside the file

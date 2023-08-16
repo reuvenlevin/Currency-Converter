@@ -22,6 +22,8 @@ public class ConvertUtils {
         this.currencyFromAmount = currencyFromAmount;
     }
 
+    public ConvertUtils(){}
+
     public String getCurrencyFrom() {
         return currencyFrom;
     }
@@ -67,7 +69,12 @@ public class ConvertUtils {
         System.out.println(jsonObject.getAsJsonObject());
 
         // get conversion rate
-        String currencyToConversionRate = String.valueOf(jsonObject.get("conversion_rates").getAsJsonObject().get(currencyTo));
+        String currencyToConversionRate =
+                String.valueOf(
+                        jsonObject
+                                .get("conversion_rates")
+                                .getAsJsonObject()
+                                .get(currencyTo.toUpperCase()));
 
         // convert fromCurrency to toCurrency
         double converted = currencyFromAmount * Double.parseDouble(currencyToConversionRate);
