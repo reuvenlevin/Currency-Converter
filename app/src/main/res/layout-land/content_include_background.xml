@@ -7,11 +7,11 @@
     <ImageView
         android:id="@+id/main_background"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/app_background"
+        android:layout_height="wrap_content"
         android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/guide_background" />
+        android:src="@drawable/app_background_land"
+        app:layout_constraintTop_toTopOf="@+id/guide_background"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_background"
