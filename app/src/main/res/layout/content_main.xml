@@ -1,52 +1,10 @@
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <include
-        android:id="@+id/top_currency_selector"
-        layout="@layout/currency_selector"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/swap_button"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include layout="@layout/content_include_background" />
 
-    <Button
-        android:id="@+id/swap_button"
-        style="@style/Widget.Material3.Button.TextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableTop="@mipmap/ic_launcher_switch_round"
-        app:layout_constraintTop_toBottomOf="@+id/top_currency_selector"
-        app:layout_constraintBottom_toTopOf="@+id/content_below_button_card"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-    />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/content_below_button_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="#f0f0f0"
-        app:cardCornerRadius="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_currency_selector"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/swap_button">
-
-        <!-- ... Content below the button ... -->
-    </com.google.android.material.card.MaterialCardView>
-
-    <include
-        android:id="@+id/bottom_currency_selector"
-        layout="@layout/currency_selector"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/content_below_button_card" />
-
+    <include layout="@layout/content_include_cards_and_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

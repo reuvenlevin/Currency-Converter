@@ -15,10 +15,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.currencyconverter.databinding.ActivityMainBinding;
 import com.example.currencyconverter.lib.ConvertUtils;
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -27,8 +27,8 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
-    private ConstraintLayout currencyTopLayout;
-    private ConstraintLayout currencyBottomLayout;
+    private MaterialCardView currencyTopLayout;
+    private MaterialCardView currencyBottomLayout;
     private Spinner spinner_top;
     private Spinner spinner_bottom;
     TextView textInputLabel;
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.toolbar);
+        setSupportActionBar(binding.includeToolbar.toolbar);
 
         convertUtils = new ConvertUtils();
 
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupFAB() {
-        binding.fab.setOnClickListener(
+        binding.fab.fab.setOnClickListener(
             view -> {
                 // start task on separate thread for network request
                 // call convert utils function

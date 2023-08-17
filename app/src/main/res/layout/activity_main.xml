@@ -4,33 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:background="@drawable/app_background"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
-
-    </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/activity_include_toolbar"
+        android:id="@+id/include_toolbar"/>
 
     <include layout="@layout/content_main"/>
 
-
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="148dp"
-        android:layout_height="42dp"
-        android:layout_gravity="bottom|center"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        android:text="@string/fab"
-        app:backgroundTint="#FDDA0D" />
+    <include layout="@layout/activity_include_fab"
+        android:id="@+id/fab"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

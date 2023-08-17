@@ -1,79 +1,75 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    android:id="@+id/bottom_card"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/bottom_card"
-        android:layout_width="322dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/cardview_light_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:padding="@dimen/card_margin">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:padding="@dimen/default_padding">
+        <TextView
+            android:id="@+id/tv_spinner_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/currency_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_spinner_label"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/spinner_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#f0f0f0"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_spinner_label">
+
+            <Spinner
+                android:id="@+id/spinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="@string/currency_type"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_gravity="end"
+                android:spinnerMode="dropdown" />
+        </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/spinner_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="#f0f0f0"
-                app:cardCornerRadius="25dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_spinner_label">
+        <TextView
+            android:id="@+id/text_input_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_margin"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:text="@string/input_currency"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_card" />
 
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_width="298dp"
-                    android:layout_height="34dp"
-                    android:layout_gravity="end"
-                    android:spinnerMode="dropdown" />
-            </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minEms="6"
+            app:boxBackgroundColor="#f0f0f0"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/input_box"
+            app:boxCornerRadiusBottomStart="@dimen/input_box"
+            app:boxCornerRadiusTopEnd="@dimen/input_box"
+            app:boxCornerRadiusTopStart="@dimen/input_box"
+            app:layout_constraintEnd_toEndOf="@+id/spinner_card"
+            app:layout_constraintStart_toStartOf="@+id/spinner_card"
+            app:layout_constraintTop_toBottomOf="@id/text_input_label">
 
-            <TextView
-                android:id="@+id/text_input_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/input_currency"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/spinner_card" />
-
-            <com.google.android.material.textfield.TextInputLayout
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:boxBackgroundColor="#f0f0f0"
-                app:boxBackgroundMode="outline"
-                app:boxCornerRadiusBottomEnd="@dimen/input_box"
-                app:boxCornerRadiusBottomStart="@dimen/input_box"
-                app:boxCornerRadiusTopEnd="@dimen/input_box"
-                app:boxCornerRadiusTopStart="@dimen/input_box"
-                app:layout_constraintTop_toBottomOf="@id/text_input_label">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/text_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="31dp"
-                    android:inputType="numberDecimal"
-                    android:padding="0dp" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+                android:inputType="numberDecimal"
+                android:padding="0dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

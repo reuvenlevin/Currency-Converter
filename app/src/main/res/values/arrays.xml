@@ -140,4 +140,74 @@
         <item>vnd</item>
         <item>zar</item>
     </string-array>
+<!--    <string-array name="currency_symbols">-->
+<!--        <item>$</item>-->
+<!--        <item>$</item>-->
+<!--        <item>$</item>-->
+<!--        <item>.د.ب</item>-->
+<!--        <item>৳</item>-->
+<!--        <item>$b</item>-->
+<!--        <item>R$</item>-->
+<!--        <item>$</item>-->
+<!--        <item>Fr.</item>-->
+<!--        <item>$</item>-->
+<!--        <item>¥</item>-->
+<!--        <item>$</item>-->
+<!--        <item>₡</item>-->
+<!--        <item>CUC</item>-->
+<!--        <item>Kč</item>-->
+<!--        <item>kr.</item>-->
+<!--        <item>RD$</item>-->
+<!--        <item>ج.م</item>-->
+<!--        <item>€</item>-->
+<!--        <item>£</item>-->
+<!--        <item>Q</item>-->
+<!--        <item>$</item>-->
+<!--        <item>L</item>-->
+<!--        <item>kn</item>-->
+<!--        <item>Ft</item>-->
+<!--        <item>₹</item>-->
+<!--        <item>₪</item>-->
+<!--        <item>₹</item>-->
+<!--        <item>kr.</item>-->
+<!--        <item>JD</item>-->
+<!--        <item>¥</item>-->
+<!--        <item>сом</item>-->
+<!--        <item>₩</item>-->
+<!--        <item>K.D.</item>-->
+<!--        <item>₸</item>-->
+<!--        <item>රු.</item>-->
+<!--        <item>RM</item>-->
+<!--        <item>$</item>-->
+<!--        <item>C$</item>-->
+<!--        <item>रू</item>-->
+<!--        <item>$</item>-->
+<!--        <item>﷼</item>-->
+<!--        <item>B/.</item>-->
+<!--        <item>S/.</item>-->
+<!--        <item>₱</item>-->
+<!--        <item>₨</item>-->
+<!--        <item>zł</item>-->
+<!--        <item>₲</item>-->
+<!--        <item>﷼</item>-->
+<!--        <item>lei</item>-->
+<!--        <item>RSD</item>-->
+<!--        <item>₽</item>-->
+<!--        <item>ر.س</item>-->
+<!--        <item>kr</item>-->
+<!--        <item>S$</item>-->
+<!--        <item>฿</item>-->
+<!--        <item>ЅМ</item>-->
+<!--        <item>₺</item>-->
+<!--        <item>NT$</item>-->
+<!--        <item>₴</item>-->
+<!--        <item>$</item>-->
+<!--        <item>$U</item>-->
+<!--        <item>so'm</item>-->
+<!--        <item>Bs.</item>-->
+<!--        <item>₫</item>-->
+<!--        <item>R</item>-->
+<!--    </string-array>-->
+
+
 </resources>
